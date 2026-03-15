@@ -23,30 +23,36 @@ A orgnização do repositório e do código do projeto reflete a seguinte estrut
 
 ```bash
 /
-├── data/                     # Dados gerados (ignorado pelo Git)
-│   ├── plots/                # Graficos (gerados pelo Python)
-│   ├── cenarios/             # Variacoes por tipo de entrada
+├── data/                       # Dados gerados (ignorado pelo Git)
+│   ├── plots/                  # Graficos (gerados pelo Python)
+│   ├── cenarios/               # Variacoes por tipo de entrada
 │   │   ├── aleatorio/
 │   │   ├── ordenado/
 │   │   └── inverso/
-│   │   
-│   └── results.csv           # Resultados do benchmark em C
-├── include/                  # Cabeçalhos (.h)
+│   └── results.csv             # Resultados do benchmark em C
+├── include/                    # Cabeçalhos (.h)
 │   ├── algoritmos.h          
 │   └── listas.h              
-├── src/                      # Implementação (C)
+├── src/                        # Implementação (C)
 │   ├── main.c
-│   ├── algoritmos/           # ordenação
+│   ├── algoritmos/             # Ordenação
 │   │   ├── bubble.c
+│   │   ├── insertion.c
+│   │   ├── merge.c
 │   │   ├── quick.c
-│   │   └── ...
-│   └── estruturas/           # Estruturas de Dados
+│   │   └── selection.c
+│   ├── desempenho/             # Análises
+│   │   ├── teste_desempenho.c
+│   │   ├── teste_desempenho.h
+│   └── estruturas/             # Estruturas de Dados
 │       ├── lista_din.c
 │       └── lista_est.c
-│── scripts/                  # Plotagem e dados (Python)
-│   ├── plot_results.py       # Gera gráficos
-│   └── dataset_gen.py        # Gera jogadores para o C
-│── docs/
+│── scripts/                    # Plotagem e dados (Python)
+│   ├── plot_results.py         # Gera gráficos
+│   └── dataset_gen.py          # Gera jogadores para o C
+│── docs/                       # Documentação
+│   ├── documento_pesquisa.pdf  # Discussão e resultado
+│   └── especificacoes.pdf      # Especificações do trabalho
 └── requirements.txt
 ```
 
